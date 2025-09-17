@@ -321,7 +321,7 @@ def main():
         gt_occ_path = info['occ_path']
 
         pred_occ = np.load(pred_occ_path)['pred']
-        gt_data = np.load(os.path.join(args.root_path, gt_occ_path, 'labels.npz'))
+        gt_data = np.load(os.path.join(gt_occ_path, 'labels.npz'))
         voxel_label = gt_data['semantics']
         lidar_mask = gt_data['mask_lidar']
         camera_mask = gt_data['mask_camera']
